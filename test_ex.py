@@ -1,19 +1,19 @@
 import pytest
 
-#TUPLE
-tuple1 = (1,2,3)
-def test_typle_1():
-    assert len(tuple1)==3
-    assert tuple1 == (1,2,3)
+#SET
+set1 = {'Michelle', 'Nicholas', 'John', 'Mercy'}
+def test_set_1():
+    assert len(set1)==4
+    assert set1 == {'Michelle', 'Nicholas', 'John', 'Mercy'}
 
-@pytest.mark.parametrize("a,b",[((1,2,3),(1,2,3))])
-def test_typle_2(a,b):
+@pytest.mark.parametrize("a,b",[({'Michelle', 'Nicholas', 'John', 'Mercy'},{'Michelle', 'Nicholas', 'John', 'Mercy'})])
+def test_set_2(a,b):
     assert a == b
 
 
-def test_typle_3():
+def test_set_3():
    try:
-       assert tuple1[0] == 2
+       assert set1[0] == 'Nicholas'
    except AssertionError:
        pass
 
